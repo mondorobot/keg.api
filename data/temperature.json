@@ -1,8 +1,8 @@
 {
-  'sensor_id': {
-    'type': 'string'
+  "sensor_id": {
+    "type": "string"
   },
-  'degree': {
-    'type': 'float'
+  "degree": {
+    "type": "float"
   }
 }

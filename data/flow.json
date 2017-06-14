@@ -1,11 +1,11 @@
 {
-  'flowSensorId': {
-    'type': 'string'
-  }
-  'pullDuration': {
-    'type': 'number'
+  "sensor_id": {
+    "type": "string"
   },
-  'flowAmount': {
-    'type': 'number'
+  "pull_duration": {
+    "type": "number"
+  },
+  "flow_amount": {
+    "type": "number"
   }
 }
