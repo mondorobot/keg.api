@@ -1,5 +1,5 @@
 {
-  "name": "Mondo Kegbot API",
+  "name": "mondo-kegbot-api",
   "version": "1.0.0",
   "description": "Mondo Kegbot API",
   "repository": {
@@ -11,5 +11,5 @@
     "npm": "3"
   },
   "author": "Mondo Robot",
-  "license": "ISC",
+  "license": "ISC"
 }
