@@ -11,5 +11,17 @@
     "npm": "3"
   },
   "author": "Mondo Robot",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "knex": "^0.13.0",
+    "pg": "^6.4.0"
+  },
+  "scripts": {
+    "db-version": "node tools/db.js version",
+    "db-migrate": "node tools/db.js migrate",
+    "db-rollback": "node tools/db.js rollback",
+    "db-migration": "node tools/db.js migration",
+    "db-seed": "node tools/db.js seed"
+  }
 }
