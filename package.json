@@ -7,20 +7,16 @@
     "url": "https://github.com/mondorobot/kegbot-api"
   },
   "engines": {
-    "node": "5",
-    "npm": "3"
+    "node": "8.1.2"
   },
   "author": "Mondo Robot",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.15.3",
-    "juice": "^4.1.0",
     "knex": "^0.13.0",
     "pg": "^6.4.0",
-    "pretty-error": "^2.1.1"
-  },
-  "devDependencies": {
+    "pretty-error": "^2.1.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
@@ -34,7 +30,9 @@
     "chokidar": "^1.7.0",
     "rimraf": "^2.6.1"
   },
+  "devDependencies": {},
   "scripts": {
+    "start": "node ./build/server.js",
     "build": "node tools/build.js",
     "build-watch": "node tools/build.js --watch",
     "db-version": "node tools/db.js version",
