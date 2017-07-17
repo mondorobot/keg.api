@@ -1,13 +1,3 @@
-#!/usr/bin/env node
-/**
- * Node.js API Starter Kit (https://reactstarter.com/nodejs)
- *
- * Copyright © 2016-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 const fs = require('fs');
 const path = require('path');
 const rimraf = require('rimraf');
@@ -24,7 +14,7 @@ module.exports = task('build', ({ watch = false, onComplete } = {}) => new Promi
   let ready = false;
 
   // Clean up the output directory
-  rimraf.sync('build/*', { nosort: true, dot: true });
+  rimraf.sync('build/*', { 'nosort': true, 'dot': true });
 
   let watcher = chokidar.watch(['src', 'package.json', 'yarn.lock']);
   watcher.on('all', (event, src) => {
@@ -44,21 +34,13 @@ module.exports = task('build', ({ watch = false, onComplete } = {}) => new Promi
       switch (event) {
         // Create a directory if it doesn't exist
         case 'addDir':
-          console.log('adding dir');
-          console.log(src);
-          console.log(dest);
           if (src.startsWith('src') && !fs.existsSync(dest)) {
             fs.mkdirSync(dest);
-          } else {
-            console.log(`existsSync ${fs.existsSync(dest)}`);
-          }
-          if (ready && onComplete) {
-            onComplete();
-          } else {
-            console.log(`ready: ${ready}`);
-            console.log(`onComplete: ${onComplete}`);
           }
 
+          if (ready && onComplete) {
+            onComplete();
+          }
           break;
 
         // Create or update a file inside the output (build) folder

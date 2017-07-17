@@ -12,7 +12,7 @@ app.use(cors({
     const whitelist = process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : [];
     cb(null, whitelist.includes(origin));
   },
-  credentials: true
+  'credentials': true
 }));
 
 const pe = new PrettyError();
@@ -25,7 +25,6 @@ app.use((err, req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  console.log('REQUESTING ROOT');
   res.send('<p>Hello Kegbots!</p>');
 });
 

@@ -1,13 +1,3 @@
-#!/usr/bin/env node
-/**
- * Node.js API Starter Kit (https://reactstarter.com/nodejs)
- *
- * Copyright © 2016-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 const fs = require('fs');
 const knex = require('knex');
 const task = require('./task');
@@ -17,10 +7,10 @@ const commands = ['version', 'migrate', 'rollback', 'migration', 'seed'];
 const command = process.argv[2];
 
 const config = {
-  client: 'pg',
-  connection: process.env.DATABASE_URL,
-  migrations: {
-    tableName: 'migrations',
+  'client': 'pg',
+  'connection': process.env.DATABASE_URL,
+  'migrations': {
+    'tableName': 'migrations',
   },
 };
 
